@@ -1,22 +1,16 @@
 package catalin;
 
-public class Vehicle implements Start, Specification {
-    private String typeOfVehicle;
-    private String make;
+public class Vehicle implements Drive, Specification {
+    private final String typeOfVehicle;
+    private String model;
     private double engineSize;
-
-
 
     public Vehicle(String typeOfVehicle) {
         this.typeOfVehicle = typeOfVehicle;
     }
 
-    public void setTypeOfVehicle(String typeOfVehicle) {
-        this.typeOfVehicle = typeOfVehicle;
-    }
-
-    public void setMake(String make) {
-        this.make = make;
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public void setEngineSize(double engineSize) {
@@ -27,8 +21,8 @@ public class Vehicle implements Start, Specification {
         return typeOfVehicle;
     }
 
-    public String getMake() {
-        return make;
+    public String getModel() {
+        return model;
     }
 
     public double getEngineSize() {
@@ -36,12 +30,17 @@ public class Vehicle implements Start, Specification {
     }
 
     @Override
-    public void specifyOfVehicle() {
-        System.out.println(getEngineSize() + " " + getMake()+ " " + getTypeOfVehicle() + "  General vehicle no specification");
+    public void displaySpecifications() {
+        System.out.println(getEngineSize() + " " + getModel()+ " " + getTypeOfVehicle() + "  General vehicle no specification");
     }
 
     @Override
     public void startEngine() {
-        System.out.println("All vehicle have function start");
+        System.out.println("Start engine for  " + model );
+    }
+
+    @Override
+    public void stopEngine() {
+        System.out.println("Stop engine");
     }
 }

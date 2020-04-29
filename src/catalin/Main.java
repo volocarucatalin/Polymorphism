@@ -3,27 +3,29 @@ package catalin;
 public class Main {
 
     public static void main(String[] args) {
-        Vehicle car = new Cars();
-        Vehicle boat = new Boats();
-        Vehicle airplane = new Airplane();
+        Car car = new Car();
+        Boat boat = new Boat();
+        Airplane airplane = new Airplane();
 
 
         car.setEngineSize(2.0);
-        car.setMake("Opel Astra");
-        car.startEngine();
-        car.specifyOfVehicle();
+        car.setModel("Opel Astra");
+        controlVehicle(car);
 
-        boat.setMake("Cuddy Cabin");
+        boat.setModel("Cuddy Cabin");
         boat.setEngineSize(2.5);
-        boat.startEngine();
-        boat.specifyOfVehicle();
+        controlVehicle(boat);
 
-        airplane.setEngineSize(75.6 );
-        airplane.setMake("Gulfstream G650");
-        airplane.startEngine();
-        airplane.specifyOfVehicle();
+        airplane.setEngineSize(75.6);
+        airplane.setModel("Gulfstream G650");
+        controlVehicle(airplane);
 
 
+    }
 
+    public static void controlVehicle(Vehicle vehicle) {
+        vehicle.startEngine();
+        vehicle.displaySpecifications();
+        vehicle.stopEngine();
     }
 }

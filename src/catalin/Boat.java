@@ -1,14 +1,14 @@
 package catalin;
 
-public class Boats extends Vehicle {
+public class Boat extends Vehicle {
 
-    public Boats() {
+    public Boat() {
         super("Water Surface");
     }
 
     @Override
-    public void specifyOfVehicle() {
-        System.out.println(getMake() + " "+getEngineSize() + " " +  getTypeOfVehicle() + "water vehicle you can drive on water surface");
+    public void displaySpecifications() {
+        System.out.println(getModel() + " "+getEngineSize() + " " +  getTypeOfVehicle() + "water vehicle you can drive on water surface");
     }
 
     @Override

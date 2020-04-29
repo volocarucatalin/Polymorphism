@@ -7,8 +7,8 @@ public class Airplane extends Vehicle {
     }
 
     @Override
-    public void specifyOfVehicle() {
-        System.out.println(getMake()  + " " + getEngineSize() + " " + getTypeOfVehicle() + "a air vehicle you can fly whit it");
+    public void displaySpecifications() {
+        System.out.println(getModel()  + " " + getEngineSize() + " " + getTypeOfVehicle() + "a air vehicle you can fly whit it");
     }
 
     @Override

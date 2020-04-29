@@ -1,5 +1,5 @@
 package catalin;
 
 public interface Specification {
-    void specifyOfVehicle();
+    void displaySpecifications();
 }
